@@ -55,7 +55,7 @@ The sum of two odd integers is even. Hint: By definition, even integers can be e
     sum of an even integer and it's square is :
           2n + (2n)(2n)
         = 2n(2n+1)
-    let k = 2n + 1
+    let k = 2n+1
     ->  sum = 2nk
     let m = nk
     ->  sum = 2m
@@ -63,6 +63,43 @@ The sum of two odd integers is even. Hint: By definition, even integers can be e
     (Direct Proof)
     
   If n squared is odd, then n is odd
+     If n is even, then n square is even
+     (Contraposition Proof)
+     n is even -> n = 2k
+     n square = (2k)^2 = 4k^2 = 2(2k^2)
+     let p = 2n^2
+     -> n^2 = 2p
+     -> n^2 is even
+     (Direct proof)
+     If n is even, then n square is even <=> if n squared is odd, then n is odd
+     (Contrapositive Law)
+     
+ PART 2: 
+ 
+ Prove by induction that 1 + 5 + 9 + ... + (4n-3) = n(2n-1)
+    Base case, n = 1:
+     1 = n(2n-1)
+     1 = 1(2(1)-1)
+     1 = 1  Base case 
+     
+     Assume the statement is true for k
+     
+     Show that k + 1 is true:
+       1 + 5 + 9 + ... + (4k-3) + (4(k+1)-3) = (k+1)(2(k+1)-1)
+       1 + 5 + 9 + ... + (4k-3) + (4k+1)     = (k+1)(2k+1)
+       we assume that it's true for (1+5+9+...+(4k-3)), we will plug it in
+       k(2k-1) + (4k+1)  =  2k^2 + 3k + 1
+       2k^2 - k + 4k +1  =  2k^2 + 3k + 1
+       2k^2 + 3k + 1     =  2k^2 + 3k + 1
+       => if k is true, then k+1 is true
+       Also, we have proven k=1 is true
+       => We have proven 1,2,...n
+       
+   Prove that for any positive integer number n, n^3 + 2n is divisible by 3
+      
+   
+     
+     
   
     
     
