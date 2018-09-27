@@ -96,10 +96,20 @@ The sum of two odd integers is even. Hint: By definition, even integers can be e
        => We have proven 1,2,...n
        
    Prove that for any positive integer number n, n^3 + 2n is divisible by 3
-      
+       Assume n^3 + 2n is divisible by 3 for any positive integer number
+       Base case: n=1, 1^3 + 2(1) = 3 which is disible by 3
+                  n=k, k^3 + 2k = 3m, where m is some integer
+                  Assume k true
+       Proving k+1 true: 
+            (k+1)^3 + 2(k+1) = k^3 + 3k^2 + 3k + 1 + 2k + 2 
+                             = k^3 + 2k + 3k^2 + 3k + 3
+                             = 3m       + 3(k^2 + k + 1)
+                             = 3(m + k^2 + k + 1)
+                             
+       
    
      
-     
+   Prove that for n >= 1, 9^n − 1 is divisible by 8 for all non-negative integers
   
     
     
