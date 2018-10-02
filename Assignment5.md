@@ -114,7 +114,21 @@ The sum of two odd integers is even. Hint: By definition, even integers can be e
    
      
    Prove that for n >= 1, 9^n − 1 is divisible by 8 for all non-negative integers
-  
+        
+        Assume 9^n - 1 is divisible by 8 for any non-negative integers
+        Base case: n = 1, 9^1 - 1 = 8, which is divisible by 8
+                   n = k, 9^k - 1 = 8m, where  m is some integer
+                   => 9^k = 8m + 1
+                   Assume k is true
+        Proving k+1 is true:
+              9^(k+1) - 1 = 9^k(9) - 1 
+                          = (8m + 1)(9) - 1 
+                          = 72m + 9 - 1
+                          = 72m + 8 
+                          = 8(9m + 1), this is divisible by 8
+       -> k + 1 is divisible by 8
+       => We have proven that 1,2,...n
+                          
     
     
  
