@@ -1,33 +1,61 @@
-// ConsoleApplication1.cpp : Defines the entry point for the console application.
-//
 
-#include "stdafx.h"
+
+
+
 #include <iostream>
+#include <ctime>
+#include <ratio>
+#include <chrono>
+#include <string>
 
 using namespace std;
+using namespace std::chrono;
 
 int GCD(int a, int b);
 
 
-/*
-*/
-
 int main()
 {
+	string input;
+
+
 	int n1, n2, result;
 
-	cout << "Please enter the two numbers to find Greatest Common Denominator: " << endl;
-	cin >> n1 >> n2;
 
-	result = GCD(n1, n2);
+	do {
+		cout << "Please enter the two numbers to find Greatest Common Denominator: " << endl;
+		cin >> n1 >> n2;
+		cin.clear();
+		cin.ignore(INT_MAX, '\n');
 
-	if (GCD) {
-		cout << "The GCD of the numbers is: " << result << endl;
-	}
+		result = GCD(n1, n2);
 
-	else {
-		cout << "Error: " << endl;
-	}
+
+		high_resolution_clock::time_point t1 = high_resolution_clock::now();
+
+		if (GCD) {
+			cout << "The GCD of the numbers is: " << result << endl;
+		}
+
+		else {
+			cout << "Error: " << endl;
+		}
+
+		high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+		duration<double> time = duration_cast<duration<double>>(t2 - t1);
+
+		cout << "It tooks " << time.count() << " to calculate GCD " << endl;
+
+
+
+		cout << "Would you like to do it again?  Enter 'Yes' or 'YES' " << endl;
+		cin >> input;
+
+	} while (input == "Yes" || input == "YES");
+	  
+
+	return 0;
 }
 
 
@@ -50,3 +78,4 @@ int GCD(int a, int b) {
 	return a;
 
 }
+
